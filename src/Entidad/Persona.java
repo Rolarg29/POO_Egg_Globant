@@ -5,7 +5,7 @@ public class Persona {
     private String nombre;
     private int edad;
     private String nacionalidad;
-    private final String CURSO = "Egg";
+    public static final String CURSO = "Egg";
 
     public Persona() {
     }

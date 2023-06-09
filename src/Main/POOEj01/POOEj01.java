@@ -1,4 +1,4 @@
-package POOEj01;
+package Main.POOEj01;
 
 import Entidad.Persona;
 import Servicios.PersonaService;
@@ -6,6 +6,7 @@ import Servicios.PersonaService;
 public class POOEj01 {
     public static void main(String[] args) {
 //        Persona primeraPersona = new Persona("Rolando", 21, "Mexicana");
+//        System.out.println(CURSO);
 //
 //        System.out.println(primeraPersona.getNombre());
 //        primeraPersona.setNombre("Juan");
@@ -16,9 +17,7 @@ public class POOEj01 {
 //        System.out.println(primeraPersona.getEdad());
 
         PersonaService perServicio = new PersonaService();
-
         Persona terceraPersona = perServicio.crearPersona();
-
         perServicio.mostrarPersona(terceraPersona);
 //        System.out.println(terceraPersona.toString());
 

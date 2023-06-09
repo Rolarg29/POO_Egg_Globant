@@ -23,6 +23,8 @@ public class PersonaService {
 
         return personaCompleta;
     }
+
+
     public void mostrarPersona(Persona persona) {
         System.out.println(persona.getNombre());
         System.out.println(persona.getEdad());
