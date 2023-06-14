@@ -1,16 +1,16 @@
-package Entidad;
+package Actividades.Entidad;
 
-public class Persona {
+public class PersonaTeoria {
 
     private String nombre;
     private int edad;
     private String nacionalidad;
     public static final String CURSO = "Egg";
 
-    public Persona() {
+    public PersonaTeoria() {
     }
 
-    public Persona(String nombre, int edad, String nacionalidad) {
+    public PersonaTeoria(String nombre, int edad, String nacionalidad) {
         this.nombre = nombre;
         this.edad = edad;
         this.nacionalidad = nacionalidad;
@@ -18,7 +18,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona {\n" +
+        return "PersonaTeoria {\n" +
                 "nombre='" + nombre + '\'' +
                 ",\nedad=" + edad +
                 ",\nnacionalidad='" + nacionalidad + '\'' + '\n' +

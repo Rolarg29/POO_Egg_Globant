@@ -1,4 +1,4 @@
-package Entidad;
+package Actividades.Entidad;
 
 public class Circumferencia {
     private double radio;

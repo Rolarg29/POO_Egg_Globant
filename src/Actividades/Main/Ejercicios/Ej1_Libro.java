@@ -1,9 +1,9 @@
-package Main.Ejercicios;
+package Actividades.Main.Ejercicios;
 
-import Entidad.Libro;
-import Servicios.LibroService;
+import Actividades.Entidad.Libro;
+import Actividades.Servicios.LibroService;
 
-public class Ejercicio1 {
+public class Ej1_Libro {
     public static void main(String[] args) {
 
         LibroService libroServicio = new LibroService();

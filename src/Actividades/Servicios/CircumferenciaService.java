@@ -1,6 +1,6 @@
-package Servicios;
+package Actividades.Servicios;
 
-import Entidad.Circumferencia;
+import Actividades.Entidad.Circumferencia;
 
 import java.util.Scanner;
 

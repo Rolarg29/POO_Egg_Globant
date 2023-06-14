@@ -1,6 +1,6 @@
-package Servicios;
+package Actividades.Servicios;
 
-import Entidad.Libro;
+import Actividades.Entidad.Libro;
 
 import java.util.Scanner;
 
