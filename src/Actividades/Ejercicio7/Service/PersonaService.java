@@ -2,9 +2,11 @@ package Actividades.Ejercicio7.Service;
 
 import Actividades.Ejercicio7.Entidad.Persona;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 import static java.lang.System.in;
+import static java.lang.System.setOut;
 
 public class PersonaService {
     Scanner read = new Scanner(in).useDelimiter("\n");
@@ -17,10 +19,12 @@ public class PersonaService {
         int edad = read.nextInt();
 
         System.out.println("Ingrese el sexo de la persona (H-hombre, M-mujer, O-otro)");
-        char sexo = read.nextLine().charAt(0);
+        char sexo = read.next().charAt(0);
+        String sexoS = Character.toString(sexo).toUpperCase();
+        sexo = sexoS.charAt(0);
         while (sexo != 'H' && sexo != 'M' && sexo != 'O') {
-            System.err.println("El sexo no es correcto, ingreselo nuevamente");
-            sexo = read.nextLine().charAt(0);
+            System.err.println("El sexo no es correcto, ingresalo nuevamente");
+            sexo = read.next().charAt(0);
         }
 
         System.out.println("Ingrese el peso de la persona");
@@ -29,28 +33,44 @@ public class PersonaService {
         System.out.println("Ingrese la altura en metros de la persona");
         double altura = read.nextDouble();
 
-        Persona nuevaPersona = new Persona(nombre, edad, sexo, peso, altura);
-        return nuevaPersona;
+        return new Persona(nombre, edad, sexo, peso, altura);
     }
 
     public int calcularIMC(Persona persona) {
         int valor;
         double imc = persona.getPeso() / (Math.pow(persona.getAltura(), 2));
         if (imc < 20.0) {
-            valor = -1;
+            valor = -1;//Debajo de su peso ideal
         }else if (imc >= 20.0 && imc < 25.0) {
-            valor = 0;
+            valor = 0;//Peso ideal
         }else{
-            valor = 1;
+            valor = 1;//sobrepeso
         }
         return valor;
     }
+    public void resultadoPeso(int valor){
+        switch (valor){
+            case 0:
+                System.out.println("se encuentra en su peso ideal!");
+                break;
+            case 1:
+                System.out.println("tiene sobrepeso.");
+                break;
+            case -1:
+                System.out.println("por debajo de su peso ideal");
+                break;
+            default:
+                 System.out.println("no cuenta con los datos necesarios");
+                 break;
+        }
+    }
 
     public boolean esMayorDeEdad(Persona persona) {
-        if (persona.getEdad()>=18){
-            return true;
-        }else {
-            return false;
+        if (persona.getEdad() >= 18){
+            System.out.println(persona.getNombre() + " es mayor de edad");
+        }else{
+            System.out.println(persona.getNombre() + " es menor de edad");
         }
+        return persona.getEdad() >= 18;
     }
 }

@@ -4,17 +4,16 @@ public class CuentaBancaria {
 
     private int numeroCuenta;
     private long clienteDNI;
-    private int saldoActual;
-    private double interes;
+    private double saldoActual;
 
     public CuentaBancaria() {
     }
 
-    public CuentaBancaria(int numeroCuenta, long clienteDNI, int saldoActual, double interes) {
+    public CuentaBancaria(int numeroCuenta, long clienteDNI, int saldoActual) {
         this.numeroCuenta = numeroCuenta;
         this.clienteDNI = clienteDNI;
         this.saldoActual = saldoActual;
-        this.interes = interes;
+
     }
 
     public int getNumeroCuenta() {
@@ -25,12 +24,8 @@ public class CuentaBancaria {
         return clienteDNI;
     }
 
-    public int getSaldoActual() {
+    public double getSaldoActual() {
         return saldoActual;
-    }
-
-    public double getInteres() {
-        return interes;
     }
 
     public void setNumeroCuenta(int numeroCuenta) {
@@ -41,11 +36,16 @@ public class CuentaBancaria {
         this.clienteDNI = clienteDNI;
     }
 
-    public void setSaldoActual(int saldoActual) {
+    public void setSaldoActual(double saldoActual) {
         this.saldoActual = saldoActual;
     }
 
-    public void setInteres(double interes) {
-        this.interes = interes;
+    @Override
+    public String toString() {
+        return "CuentaBancaria{" +
+                "numeroCuenta=" + numeroCuenta +
+                ", clienteDNI=" + clienteDNI +
+                ", saldoActual=" + saldoActual +
+                '}';
     }
 }
