@@ -2,11 +2,8 @@ package Actividades.Ejercicio7.Service;
 
 import Actividades.Ejercicio7.Entidad.Persona;
 
-import java.util.Locale;
 import java.util.Scanner;
-
 import static java.lang.System.in;
-import static java.lang.System.setOut;
 
 public class PersonaService {
     Scanner read = new Scanner(in).useDelimiter("\n");

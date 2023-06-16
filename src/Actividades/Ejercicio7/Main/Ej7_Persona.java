@@ -38,8 +38,8 @@ public class Ej7_Persona {
         }
 
         long conteoPesoIdeal = Arrays.stream(valoresIMC).filter(valor -> valor == 0).count();
-        long conteoSobrePeso = Arrays.stream(valoresIMC).filter(valor -> valor == 1).count();;
-        long conteoBajoPeso = Arrays.stream(valoresIMC).filter(valor -> valor == -1).count();;
+        long conteoSobrePeso = Arrays.stream(valoresIMC).filter(valor -> valor == 1).count();
+        long conteoBajoPeso = Arrays.stream(valoresIMC).filter(valor -> valor == -1).count();
 
         System.out.println("\n===<>===<>RESULTADOS<>===<>===");
         System.out.println("Total Personas: "+personas.length);
