@@ -57,7 +57,7 @@ public class PersonaService {
                 System.out.println("tiene sobrepeso.");
                 break;
             case -1:
-                System.out.println("por debajo de su peso ideal");
+                System.out.println("se encuentra por debajo de su peso ideal");
                 break;
             default:
                  System.out.println("no cuenta con los datos necesarios");
