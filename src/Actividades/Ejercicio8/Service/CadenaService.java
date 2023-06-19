@@ -66,7 +66,7 @@ public class CadenaService {
         String nuevaFrase = "";
         for (int i = 0; i < cadena.getLongitud(); i++) {
             char letraActual = cadena.getFrase().charAt(i);
-             nuevaFrase=cadena.getFrase().replace('a', letraNueva.charAt(0));
+            nuevaFrase=cadena.getFrase().replace('a', letraNueva.charAt(0));
         }
         System.out.println(nuevaFrase);
     }
