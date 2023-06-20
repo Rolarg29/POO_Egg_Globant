@@ -43,9 +43,9 @@ public class CuentaBancaria {
     @Override
     public String toString() {
         return "CuentaBancaria{" +
-                "numeroCuenta=" + numeroCuenta +
-                ", clienteDNI=" + clienteDNI +
-                ", saldoActual=" + saldoActual +
+                "\n>numeroCuenta=" + numeroCuenta +
+                ", \n>clienteDNI=" + clienteDNI +
+                ", \n>saldoActual=" + saldoActual +
                 '}';
     }
 }

@@ -28,8 +28,8 @@ public class RectanguloService {
         return perimetro;
     }
     public void dibujarRectangulo(Rectangulo r) {
-        for(int i = 0; i < r.getBase(); i++) {
-            for(int j = 0; j < r.getAltura(); j++) {
+        for(int i = 0; i < r.getAltura(); i++) {
+            for(int j = 0; j < r.getBase(); j++) {
                 System.out.print("* ");
             }
             System.out.println();

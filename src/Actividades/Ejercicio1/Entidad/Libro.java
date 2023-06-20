@@ -20,9 +20,9 @@ public class Libro {
     public String toString() {
         return "Libro{" +
                 "ISBN='" + ISBN + '\'' +
-                ", titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", numPaginas=" + numPaginas +
+                ",\n titulo='" + titulo + '\'' +
+                ",\n autor='" + autor + '\'' +
+                ",\n numPaginas=" + numPaginas +
                 '}';
     }
 

@@ -16,7 +16,7 @@ public class CadenaService {
             char letraActual = cadena.getFrase().charAt(i);
             if(esVocal(letraActual)) contador++;
         }
-        System.out.println(contador);
+        System.out.println("Vocales: " + contador);
     }
 
     public static boolean esVocal(char letra) {
@@ -63,15 +63,6 @@ public class CadenaService {
         System.out.println("Ingrese un nuevo caracter:");
         String letraNueva = read.nextLine();
 
-        String nuevaFrase = "";
-        for (int i = 0; i < cadena.getLongitud(); i++) {
-            char letraActual = cadena.getFrase().charAt(i);
-            nuevaFrase=cadena.getFrase().replace('a', letraNueva.charAt(0));
-        }
-        System.out.println(nuevaFrase);
-    }
-
-    public void reemplazar(String letraNueva,Cadena cadena){
         String nuevaFrase = "";
         for (int i = 0; i < cadena.getLongitud(); i++) {
             char letraActual = cadena.getFrase().charAt(i);
