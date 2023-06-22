@@ -1,6 +1,5 @@
 package Actividades.Ejercicio10.Main;
 
-import Actividades.Ejercicio10.Service.ArrayService;
 
 import java.util.Arrays;
 import java.util.Random;
