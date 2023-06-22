@@ -28,4 +28,12 @@ public class Matematica {
     public void setNumero2(double numero2) {
         this.numero2 = numero2;
     }
+
+    @Override
+    public String toString() {
+        return "Matematica {" +
+                "\nnumero1=" + numero1 +
+                ", \nnumero2=" + numero2 +
+                "\n}";
+    }
 }
