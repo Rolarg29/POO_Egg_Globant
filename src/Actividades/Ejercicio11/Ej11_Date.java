@@ -1,4 +1,4 @@
-package Actividades.Ejercicio11.Main;
+package Actividades.Ejercicio11;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
