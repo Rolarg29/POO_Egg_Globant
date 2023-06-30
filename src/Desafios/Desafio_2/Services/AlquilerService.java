@@ -48,7 +48,7 @@ public class AlquilerService {
     public void listarAlquileres(Alquiler[] al){
         System.out.println("==Lista de alquileres==");
         for (Alquiler alquiler : al) {
-            System.out.println(alquiler.getPeliculaAlquilada());
+            System.out.println(alquiler);
         }
         System.out.println("========================");
     }

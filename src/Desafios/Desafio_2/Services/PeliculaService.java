@@ -2,8 +2,7 @@ package Desafios.Desafio_2.Services;
 
 import Desafios.Desafio_2.Entidades.Pelicula;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 import static java.lang.System.in;
 
@@ -32,8 +31,9 @@ public class PeliculaService {
 
     public void listarPeliculas(Pelicula[] peliculas){
         System.out.println("==Lista de peliculas==");
+//        Collections.sort(peliculas, new Comparator<Pelicula>);
         for (Pelicula pelicula : peliculas) {
-            System.out.println(pelicula.getTitulo());
+            System.out.println(pelicula);
         }
         System.out.println("========================");
     }
@@ -48,11 +48,6 @@ public class PeliculaService {
             }
         }
         System.out.println("La película no existe en la lista");
-//        if(Arrays.binarySearch(peliculas, pelicula)==-1){
-//            System.out.println("La película no existe");
-//        }else {
-//            System.out.println("La película no existe");
-//        }
     }
 
     public void buscarPorGenero(Pelicula[] peliculas){

@@ -73,5 +73,6 @@ public class Desafio2 {
                     menu(peliculas, alquiles, ps, as);
                     break;
             }
+            read.close();
     }
 }
