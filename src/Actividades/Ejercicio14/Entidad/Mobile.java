@@ -1,5 +1,7 @@
 package Actividades.Ejercicio14.Entidad;
 
+import java.util.Arrays;
+
 public class Mobile {
     private String marca;
     private String modelo;
@@ -66,5 +68,17 @@ public class Mobile {
 
     public void setCodigo(int[] codigo) {
         this.codigo = codigo;
+    }
+
+    @Override
+    public String toString() {
+        return "Mobile{" +
+                "\nmarca= '" + marca + '\'' +
+                ", \nmodelo= '" + modelo + '\'' +
+                ", \nprecio= $" + precio +
+                ", \nmemoriaRam= '" + memoriaRam + '\'' +
+                ", \nalmacenamiento= '" + almacenamiento + '\'' +
+                ", \ncodigo=" + Arrays.toString(codigo) + "\n"+
+                '}';
     }
 }
