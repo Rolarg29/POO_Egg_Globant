@@ -49,7 +49,7 @@ public class CursoService {
         return curso;
     }
 
-    public void calcularGanacia(Curso curso){
+    public void calcularGanancia(Curso curso){
         double ganancia = curso.getPrecioPorHora()*curso.getCantidadHorasPorDia()*curso.getCantidadDiasPorSemana()*curso.getAlumnos().length;
         System.out.println("La ganancia del curso es: "+ganancia);
     }

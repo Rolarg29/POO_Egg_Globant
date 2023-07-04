@@ -9,7 +9,7 @@ public class Ej13_Curso {
         CursoService cService = new CursoService();
         Curso curso = cService.crearCurso();
         cService.mostrarCurso(curso);
-        cService.calcularGanacia(curso);
+        cService.calcularGanancia(curso);
 
     }
 }
