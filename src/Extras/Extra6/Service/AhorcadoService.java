@@ -9,7 +9,7 @@ import static java.lang.System.in;
 public class AhorcadoService {
 
     private final Ahorcado ahorcado = new Ahorcado();
-    private String[] letrasEncontradas;
+    private char[] letrasEncontradas;
     Scanner read = new Scanner(in);
 
     public void crearJuego(){
@@ -18,18 +18,10 @@ public class AhorcadoService {
         String palabra = read.nextLine();
         System.out.println("Ingrese el máximo de jugadas permitidas en este juego (Recomendado: " + Math.round(palabra.length()*1.5)+")");
         int maxJugadas = read.nextInt();
-        ahorcado.setPalabra(llenarVector(palabra));
+        ahorcado.setPalabra(palabra.toCharArray());
         ahorcado.setCantidadJugadas(maxJugadas);
         ahorcado.setCantidadLetrasAcertadas(0);
-        letrasEncontradas = new String[palabra.length()];
-    }
-    private String[] llenarVector(String palabra){
-        int longitud = palabra.length();
-        String[] letras = new String[longitud];
-        for(int i = 0; i < longitud; i++){
-            letras[i] = palabra.substring(i, i+1);
-        }
-        return letras;
+        letrasEncontradas = new char[palabra.length()];
     }
 
     public void longitud(){
@@ -37,22 +29,21 @@ public class AhorcadoService {
     }
 
     public void buscarLetra(){
-        String[] letras = ahorcado.getPalabra();
+        char[] letras = ahorcado.getPalabra();
         System.out.println("La palabra a buscar tiene "+ahorcado.getPalabra().length+" letras.");
         System.out.println("Escriba una letra para buscarla...");
-        String letra = read.next();
+        char letra = read.next().charAt(0);
         if(encontrada(letra)){
             int encontradas = 0;
             for (int i = 0; i < letras.length; i++) {
-                String s = letras[i];
-                if (s.equalsIgnoreCase(letra)) {
+                char s = letras[i];
+                if (String.valueOf(s).equalsIgnoreCase(String.valueOf(letra))) {
                     letrasEncontradas[i]= s;
                     encontradas++;
                 }
             }
             ahorcado.setCantidadLetrasAcertadas(ahorcado.getCantidadLetrasAcertadas() + encontradas);
             System.out.println("Has acertado una letra que pertenece a la palabra!");
-            mostrarLetrasAcertadas();
         }else{
             ahorcado.setCantidadJugadas(ahorcado.getCantidadJugadas()-1);
             System.out.println("Has fallado en encontrar una letra!");
@@ -61,10 +52,10 @@ public class AhorcadoService {
         System.out.println("Letras restantes: " + (ahorcado.getPalabra().length- ahorcado.getCantidadLetrasAcertadas()));
     }
 
-    private boolean encontrada(String letra){
-        String[] letras = ahorcado.getPalabra();
-        for (String s : letras) {
-            if (s.equalsIgnoreCase(letra)) {
+    private boolean encontrada(char letra){
+        char[] letras = ahorcado.getPalabra();
+        for (char s : letras) {
+            if (String.valueOf(s).equalsIgnoreCase(String.valueOf(letra))) {
                 return true;
             }
         }
@@ -74,6 +65,7 @@ public class AhorcadoService {
     public void intentos(){
         System.out.println("Errores restantes: " + ahorcado.getCantidadJugadas());
     }
+
     private boolean estatusJuego(){
         if(ahorcado.getCantidadLetrasAcertadas() == ahorcado.getPalabra().length){
             System.out.println("Felicidades!!!! Has ganado el juego:)");
@@ -84,19 +76,24 @@ public class AhorcadoService {
     }
     private String recuperarPalabra(){
         String palabra = "";
-        for (String s : ahorcado.getPalabra()) {
-            palabra = palabra.concat(s);
+        for (char s : ahorcado.getPalabra()) {
+            palabra = palabra.concat(String.valueOf(s));
         }
         return palabra;
     }
+
     private void mostrarLetrasAcertadas(){
-        for (String s : letrasEncontradas) {
-            if (s==null){
-                s=" ";
+        for (char s : letrasEncontradas) {
+            if (s == '\0'){
+                s=' ';
             }
             System.out.print("["+s+"] ");
         }
         System.out.println();
+    }
+
+    private void finalizarJuego(){
+        read.close();
     }
 
     public void juego(){
@@ -112,5 +109,9 @@ public class AhorcadoService {
                 break;
             }
         }while(ahorcado.getCantidadJugadas() > 0);
+        System.out.println("Has alcanzado el máximo de errores permitidos :(");
+        System.out.println("GAME OVER");
+        finalizarJuego();
     }
+
 }

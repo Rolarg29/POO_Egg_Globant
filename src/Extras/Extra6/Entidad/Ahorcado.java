@@ -1,24 +1,24 @@
 package Extras.Extra6.Entidad;
 
 public class Ahorcado {
-    private String[] palabra;
+    private char[] palabra;
     private int cantidadLetrasAcertadas;
     private int cantidadJugadas;
 
     public Ahorcado() {
     }
 
-    public Ahorcado(String[] palabra, int cantidadLetrasAcertadas, int cantidadJugadas) {
+    public Ahorcado(char[] palabra, int cantidadLetrasAcertadas, int cantidadJugadas) {
         this.palabra = palabra;
         this.cantidadLetrasAcertadas = cantidadLetrasAcertadas;
         this.cantidadJugadas = cantidadJugadas;
     }
 
-    public String[] getPalabra() {
+    public char[] getPalabra() {
         return palabra;
     }
 
-    public void setPalabra(String[] palabra) {
+    public void setPalabra(char[] palabra) {
         this.palabra = palabra;
     }
 
