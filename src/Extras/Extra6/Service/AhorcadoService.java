@@ -10,6 +10,7 @@ public class AhorcadoService {
 
     private final Ahorcado ahorcado = new Ahorcado();
     private char[] letrasEncontradas;
+    private char[] letrasIntentadas;
     Scanner read = new Scanner(in);
 
     public void crearJuego(){
@@ -28,6 +29,10 @@ public class AhorcadoService {
         System.out.println("La cantidad de letras que tiene la palabra de este juego es: "+ahorcado.getPalabra().length);
     }
 
+    public void validarLetraIngresada(char letra){
+
+    }
+
     public void buscarLetra(){
         char[] letras = ahorcado.getPalabra();
         System.out.println("La palabra a buscar tiene "+ahorcado.getPalabra().length+" letras.");
@@ -36,9 +41,9 @@ public class AhorcadoService {
         if(encontrada(letra)){
             int encontradas = 0;
             for (int i = 0; i < letras.length; i++) {
-                char s = letras[i];
-                if (String.valueOf(s).equalsIgnoreCase(String.valueOf(letra))) {
-                    letrasEncontradas[i]= s;
+                char x = letras[i];
+                if (String.valueOf(x).equalsIgnoreCase(String.valueOf(letra))) {
+                    letrasEncontradas[i]= x;
                     encontradas++;
                 }
             }
@@ -74,6 +79,7 @@ public class AhorcadoService {
         }
         return false;
     }
+
     private String recuperarPalabra(){
         String palabra = "";
         for (char s : ahorcado.getPalabra()) {

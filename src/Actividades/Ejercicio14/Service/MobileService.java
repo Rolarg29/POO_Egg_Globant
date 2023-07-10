@@ -26,9 +26,10 @@ public class MobileService {
 
     private void ingresarCodigo(){
         int[] codigo = new int[7];
-        System.out.println("Ingrese el código del mobile un dígito a la vez");
+        System.out.println("Ingrese el código del mobile un dígito a la vez (8 dígitos)");
         for (int i = 0; i < codigo.length; i++) {
-            codigo[i] = read.nextInt();
+//            codigo[i] = read.nextInt();
+            codigo[i] = (int) (Math.random()*10);
         }
         mobile.setCodigo(codigo);
     }
