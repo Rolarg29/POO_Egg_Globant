@@ -1,7 +1,7 @@
 package Desafios.Desafio_3.Entidades;
 
 public class Cliente {
-    public final static int noId = 0;
+    public static final int noId = 0;
     private int id;
     private String nombre;
     private int edad;
@@ -59,13 +59,13 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                ", altura=" + altura +
-                ", peso=" + peso +
-                ", objetivo='" + objetivo + '\'' +
+        return "Cliente#" +id+" -> {" +
+                "ID= " + id +
+                ", nombre= '" + nombre + '\'' +
+                ", edad= " + edad +
+                ", altura= " + altura +
+                ", peso= " + peso +
+                ", objetivo= '" + objetivo + '\'' +
                 '}';
     }
 }

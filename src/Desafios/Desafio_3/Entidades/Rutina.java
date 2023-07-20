@@ -46,4 +46,15 @@ public class Rutina {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    @Override
+    public String toString() {
+        return "Rutina#"+id + " {"+
+                "id= " + id +
+                ", nombre= '" + nombre + '\'' +
+                ", duración(sets)= " + duracion +
+                ", dificultad= '" + nivelDificultad + '\'' +
+                ", descripcion= '" + descripcion + '\'' +
+                '}';
+    }
 }

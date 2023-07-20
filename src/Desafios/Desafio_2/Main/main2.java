@@ -3,14 +3,30 @@ package Desafios.Desafio_2.Main;
 import Desafios.Desafio_2.Entidades.Alquiler;
 import Desafios.Desafio_2.Services.AlquilerService;
 
-public class main2 {
-    public static void main(String[] args) {
-        Alquiler a = new Alquiler();
-        AlquilerService as = new AlquilerService();
-        a.setFechaInicio(as.definirFecha());
-        a.setFechaFin(as.definirFecha());
+import java.util.Collections;
+import java.util.HashSet;
 
-        long dias = a.getFechaFin().getTime()- a.getFechaInicio().getTime();
-        System.out.println(dias/86400000);
+public class main2 {
+
+
+
+    public static void main(String[] args) {
+
+        HashSet<String> cars = new HashSet<>();
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("BMW");
+        cars.add("Mazda");
+        cars.add("Audi");
+
+        System.out.println(cars);
+
+        for (String i : cars) {
+            System.out.println(i);
+        }
+        for (String i : cars) {
+            System.out.println(i.hashCode());
+        }
     }
-}
+    }
